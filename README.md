@@ -10,9 +10,9 @@
 
 ## 🧐 Overview
 
-This is a **ReactJS** powered SQL Editor, allowing users to execute SQL queries effortlessly.
+This is a **ReactJS** powered SQL Tadka, allowing users to execute SQL queries effortlessly.
 
-The application features an intuitive SQL editor where users can write queries and interact with two key buttons: **Clear** and **Run**. Upon clicking **Run**, the editor extracts the table name from the query and checks if it exists in a predefined list of supported tables (**TABLE_NAMES**). If the table exists, an API request fetches data from a URL, and the query is executed using **alasql**, returning results in JSON format, which are then displayed in a structured table.
+The application features an intuitive SQL Tadka where users can write queries and interact with two key buttons: **Clear** and **Run**. Upon clicking **Run**, the editor extracts the table name from the query and checks if it exists in a predefined list of supported tables (**TABLE_NAMES**). If the table exists, an API request fetches data from a URL, and the query is executed using **alasql**, returning results in JSON format, which are then displayed in a structured table.
 
 ### Key Features:
 
@@ -21,7 +21,41 @@ The application features an intuitive SQL editor where users can write queries a
 
 > _Currently, only `SELECT` queries are supported. More functionalities will be added in future updates._
 
-<br>
+## Directory Structure
+```
+sql-tadka/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Editor.css
+│   │   ├── Editor.js
+│   │   ├── ReactTable.js
+│   │   ├── ResultSection.css
+│   │   ├── ResultSection.js
+│   │   ├── SearchComponent.css
+│   │   ├── SearchComponent.js
+│   │   ├── SideNavbar.css
+│   │   └── SideNavbar.js
+│   ├── constants/
+│   │   └── constants.js
+│   ├── contexts/
+│   │   └── EditorContext.js
+│   ├── helpers/
+│   │   └── helpers.js
+│   ├── LandingPageComponents/
+│   │   └── Navbar.js
+│   └── pages/
+│       ├── SQLEditor.css
+│       ├── SQLEditor.js
+│       ├── App.js
+│       └── index.js
+├── styles/
+│   └── styles.css
+├── .gitignore
+├── package-lock.json
+├── package.json
+└── README.md
+```
 
 ## 🚀 Live Demo
 
@@ -46,7 +80,7 @@ The application is hosted on Vercel. Check it out here:
 
 ![ReactJS](https://img.shields.io/badge/ReactJS-61DAFB?&style=for-the-badge&logo=react&logoColor=white&style=plastic)
 
-<br>
+
 
 ## 📦 Major Dependencies
 
@@ -83,3 +117,5 @@ To enhance performance, the following strategies were implemented:
 <br>
 
 <h3 align="center">🎉 Thank You for Checking Out SQL Tadka! 🎉</h3>
+
+

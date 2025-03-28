@@ -4,7 +4,7 @@
 <br>
 <br>
 
-<h1 align="center">SQL Editor - Built with React</h1>
+<h1 align="center">SQL Tadka - Built with React</h1>
 
 <br>
 
@@ -27,7 +27,7 @@ The application features an intuitive SQL editor where users can write queries a
 
 The application is hosted on Vercel. Check it out here:
 
-<h3><a href="https://sql-editor-react.vercel.app/sql-editor">SQL-Editor</a></h3>
+<h3><a href="https://sql-tadka.vercel.app/">SQL-Tadka</a></h3>
 
 <br>
 
@@ -62,8 +62,11 @@ The application is hosted on Vercel. Check it out here:
 
 Using Lighthouse Chrome DevTools, the application's performance was analyzed:
 
-![image](https://user-images.githubusercontent.com/54144759/175161784-aa1a49b2-cddf-480d-a884-35efe602b363.png)
-![image](https://user-images.githubusercontent.com/54144759/175161331-64ed2b8f-92ba-4e6f-98e4-accafe142ed8.png)
+### Desktop Performance
+![image](./public/desktop-perf.png)
+
+### Mobile Performance
+![image](./public/mobile-perf.png)
 
 - **Performance score ranges between 96-98**
 - Other metrics remain consistent
@@ -79,4 +82,4 @@ To enhance performance, the following strategies were implemented:
 
 <br>
 
-<h3 align="center">🎉 Thank You for Checking Out SQL Editor! 🎉</h3>
+<h3 align="center">🎉 Thank You for Checking Out SQL Tadka! 🎉</h3>

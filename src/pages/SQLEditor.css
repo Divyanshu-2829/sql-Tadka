@@ -1,0 +1,119 @@
+.sql-editor {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.navbar{
+  width: 18%;
+}
+
+.sql-editor .container {
+  width: 82%;
+  background: #F3F4F6;
+  display: flex;
+  flex-direction: row;
+}
+
+.sql-editor .container .col1 {
+  height: calc(100% - 30px);
+  margin: 15px;
+  width: 40%;
+}
+
+.sql-editor .container .col1 .editor-section {
+  height: 50%;
+}
+
+.sql-editor .container .col1 .result-section {
+  height: calc(50% - 20px);
+  background-color: white;
+  padding: 10px;
+}
+
+.result-section {
+  flex: 1; /* Makes it take full height of .col2 */
+  height: 100%; /* Ensures full height within .col2 */
+}
+.sql-editor .container .col2 {
+  display: flex; /* Ensures child elements respect height */
+  flex-direction: column; /* Stacks children vertically */
+  height: calc(100% - 30px);
+  margin: 15px;
+  margin-left: 0;
+  width: 60%;
+}
+
+.sql-editor .container .col2 .section {
+  background-color: white;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+.search-section {
+  display: flex;
+  place-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  height: calc(50% - 20px);
+  gap: 30px; /* Adjust the gap as needed */
+}
+
+.available-tables-section,
+.history-section {
+  flex: 1; /* Each takes 50% width */
+  height: 100%;
+}
+.sql-editor .container .col2 .available-tables-section {
+  height: 100%;
+}
+
+
+.sql-editor .container .col2 .history-section {
+  height: calc(50% - 20px);
+}
+
+
+.col2{
+  position: relative;
+}
+
+
+.sql-editor .suspense-loader {
+  height: 100%;
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  place-items: center;
+}
+
+.customToast {
+  background-color: #2F2E41;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .sql-editor .container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .sql-editor .container .col1,
+  .sql-editor .container .col2 {
+    width: 100%;
+    margin: 10px 0;
+    height: auto;
+  }
+
+  .search-section {
+    display: none;
+  }
+}

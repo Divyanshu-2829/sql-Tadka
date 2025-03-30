@@ -15,11 +15,12 @@
   }
   
   .table-names-container .search-bar .searchbar {
-    background: #F0F0F0;
+    background: #d9d9f0;
     border-radius: 8px;
     border: none;
     width: calc(100% - 30px);
     padding: 10px 15px;
+
   }
   
   .table-names-container .tablename-container {

@@ -21,7 +21,7 @@ const SearchComponent = ({ searchList, searchType, head, type }) => {
           onChange={(e) => {
             setSearchValue(e.target.value);
           }}
-          placeholder="Search ..."
+          placeholder="Search Tables"
           type="text"
           className="searchbar"
         />

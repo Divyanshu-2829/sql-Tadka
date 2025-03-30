@@ -18,7 +18,7 @@ const Editor = ({ setQuery, query, executeQuery }) => {
       <CodeMirror
         value={content}
         extensions={[sql()]}
-        onChange={(value, viewUpdate) => {
+        onChange={(value) => {
           setContent(value);
         }}
       />

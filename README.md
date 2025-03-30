@@ -73,6 +73,9 @@ The application is hosted on Vercel. Check it out here:
 4. `SELECT * FROM Employees;`
 5. `SELECT * FROM Orders;`
 6. `SELECT * FROM Products;`
+7. `SELECT * FROM Suppliers;`
+8. `SELECT * FROM Shippers;`
+9. `SELECT * FROM Regions;`
 
 <br>
 
@@ -102,7 +105,7 @@ Using Lighthouse Chrome DevTools, the application's performance was analyzed:
 ### Mobile Performance
 ![image](./public/mobile-perf.png)
 
-- **Performance score ranges between 96-98**
+- **Performance score ranges between 88-98**
 - Other metrics remain consistent
 
 <br>
@@ -111,7 +114,7 @@ Using Lighthouse Chrome DevTools, the application's performance was analyzed:
 
 To enhance performance, the following strategies were implemented:
 
-- Used React's **memo, useMemo, and useCallback** hooks to reduce unnecessary re-renders.
+- Used React's **memo, useMemo, useContext, useState, useEffect and useCallback** hooks to reduce unnecessary re-renders.
 - Applied **code-splitting** to the SQL editor component for faster initial load times.
 
 <br>

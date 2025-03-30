@@ -1,6 +1,7 @@
 import React, { useEffect, useState, memo, lazy, Suspense } from "react";
 import SideNavbar from "../components/SideNavbar";
 import { fetchData } from "../helpers/helpers";
+
 import "./SQLEditor.css";
 import toast from "react-hot-toast";
 import { Toaster } from "react-hot-toast";
@@ -42,7 +43,16 @@ const SQLEditor = () => {
   };
 
   const executeQuery = (query) => {
-    if (query === "") {
+    if (!TABLE_NAMES.includes(tableName)) {
+      const tableName = "customers";
+      fetchData(
+        tableName,
+        setResult,
+        setResultIsLoading,
+        setHistory,
+        "SELECT * FROM Customers"
+      );
+    } else if (query === "") {
       toast.custom(
         <div className="customToast">Please enter a query to execute</div>
       );
@@ -64,7 +74,15 @@ const SQLEditor = () => {
         setResultIsLoading(false);
       }
     } else {
-      toast.error("Sorry! Something is wrong with your query");
+      const tableName = "customers";
+      fetchData(
+        tableName,
+        setResult,
+        setResultIsLoading,
+        setHistory,
+        "SELECT * FROM Customers"
+      );
+      // toast.error("Sorry! Something is wrong with your query");
       setResultIsLoading(false);
     }
   };

@@ -8,7 +8,6 @@ const links = [
   { label: "Query Editor", value: "query-editor" },
 ];
 
-//random sql queries with labels
 
 const SideNavbar = () => {
   const { query, setQuery, setContent } = useEditorContext();

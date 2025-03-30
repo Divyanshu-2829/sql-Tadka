@@ -7,7 +7,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/" element={<LandingPage />} /> */}
           <Route path="/" element={<SQLEditor />} />
         </Routes>
       </BrowserRouter>

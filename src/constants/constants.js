@@ -8,12 +8,12 @@ const TABLE_NAMES = [
   "products",
   "regions",
   "shippers",
-  "supplies",
+  "suppliers",
   "territories",
 ];
 
 export const queries = [
-  { label: "Query 1", value: "SELECT * FROM users" },
+  { label: "Query 1", value: "SELECT * FROM employee_territories" },
   { label: "Query 2", value: "SELECT * FROM orders" },
   { label: "Query 3", value: "SELECT * FROM products" },
   { label: "Query 4", value: "SELECT * FROM customers" },

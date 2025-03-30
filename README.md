@@ -19,7 +19,6 @@ The application features an intuitive SQL Tadka where users can write queries an
 - **Table Names Section** - Displays supported table names for easy reference. Includes a **search bar**.
 - **History Panel** - Stores previously executed queries with their status. Also includes a **search bar**.
 
-> _Currently, only `SELECT` queries are supported. More functionalities will be added in future updates._
 
 ## Directory Structure
 ```

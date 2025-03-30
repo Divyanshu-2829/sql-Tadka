@@ -34,25 +34,18 @@ const SQLEditor = () => {
 
   // Function to get Table name out of the query String
   const getTableName = (items) => {
+    console.log("Items: ", items);
     const idx = items.indexOf("FROM");
-    if (idx !== -1) {
-      const tableName = items[idx + 1].replace(";", "");
+    if (idx !== -1 && idx + 1 < items.length) {
+      const tableName = items[idx + 1].split(/\s+/)[0]; // Take only the first part before spaces/newlines
       setTableName(tableName);
       return tableName;
     }
+    return null;
   };
 
   const executeQuery = (query) => {
-    if (!TABLE_NAMES.includes(tableName)) {
-      const tableName = "customers";
-      fetchData(
-        tableName,
-        setResult,
-        setResultIsLoading,
-        setHistory,
-        "SELECT * FROM Customers"
-      );
-    } else if (query === "") {
+    if (query === "") {
       toast.custom(
         <div className="customToast">Please enter a query to execute</div>
       );
@@ -62,18 +55,31 @@ const SQLEditor = () => {
       const items = query.split(" ");
       if (items[0].toLowerCase() === "select") {
         const table = getTableName(items);
-        fetchData(
-          table.toLowerCase(),
-          setResult,
-          setResultIsLoading,
-          setHistory,
-          query
-        );
+        if (TABLE_NAMES.includes(table)) {
+          fetchData(
+            table.toLowerCase(),
+            setResult,
+            setResultIsLoading,
+            setHistory,
+            query
+          );
+        } else {
+          console.log("Table name is not valid: ", table);
+          const tableName = "customers";
+          fetchData(
+            tableName,
+            setResult,
+            setResultIsLoading,
+            setHistory,
+            "SELECT * FROM Customers"
+          );
+        }
       } else {
         toast.error("Sorry! SELECT queries are only supported for now.");
         setResultIsLoading(false);
       }
     } else {
+      console.log("Query is not valid: ", query);
       const tableName = "customers";
       fetchData(
         tableName,

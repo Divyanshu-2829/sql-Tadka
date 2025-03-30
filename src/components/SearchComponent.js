@@ -17,14 +17,14 @@ const SearchComponent = ({ searchList, searchType, head, type }) => {
     <div className="table-names-container">
       <div className="head">{head}</div>
       <div className="search-bar">
-        <input
-          onChange={(e) => {
-            setSearchValue(e.target.value);
-          }}
-          placeholder="Search Tables"
-          type="text"
-          className="searchbar"
-        />
+      <input
+        onChange={(e) => {
+          setSearchValue(e.target.value);
+        }}
+        placeholder={type === "history" ? "Search History" : "Search Available Tables"}
+        type="text"
+        className="searchbar"
+      />
       </div>
       <div className="tablename-container">
         {type === "table" && (

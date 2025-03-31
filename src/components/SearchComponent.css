@@ -39,17 +39,17 @@
   .table-names-container .tablename-container .table-names .table-name {
     padding: 5px;
     margin-bottom: 10px;
-    color: #374151;
+    color: black;
     border-radius: 5px;
   }
   
   .table-names-container .tablename-container .table-names .table-name.odd {
-    background-color: #f3f4f6;
+    background-color: #87bbf3;
   }
   
   .table-names-container .tablename-container .table-names .table-name.even {
-    background-color: #2F2E41;
-    color: white;
+    background-color: #87bbf3;
+    color: rgb(23, 1, 1);
   }
   
   .table-names-container .tablename-container .table-names.history .table-name {
